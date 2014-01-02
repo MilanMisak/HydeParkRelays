@@ -8,8 +8,14 @@ module.exports = function(grunt) {
             },
             development: {
                 files: {
-                    'assets/css/style.min.css': 'assets/css/style.less'
+                    'assets/css/hpr.min.css': 'assets/css/hpr.less'
                 }
+            },
+        },
+        concat: {
+            dist: {
+                src: ['assets/css/pure-min.css', 'assets/css/swipebox.css', 'assets/css/hpr.min.css'],
+                dest: 'assets/css/styles.min.css',
             },
         },
         uglify: {
@@ -31,9 +37,10 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['less', 'uglify']);
+    grunt.registerTask('default', ['less', 'concat', 'uglify']);
 
 };
