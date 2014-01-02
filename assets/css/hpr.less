@@ -1,6 +1,8 @@
 ///// VARIABLES /////
 @breakpointMobile: 768px;
 @breakpointMobileLower: 767px;
+@breakpointCourseMaps: 501px;
+@breakpointCourseMapsLower: 500px;
 
 //@secondary: #00B236;
 //@secondary: #19FF5F;
@@ -92,6 +94,42 @@ table {
     }
     @media(min-width: 351px) and (max-width: 500px) {
         padding: 6px 6px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mobile-gap {
+    @media(max-width: @breakpointCourseMapsLower) {
+        margin-top: 20px;
+    }
+}
+.pure-g-r>.pure-u, .pure-g-r>.pure-u-1-2 {
+    @media (max-width: 767px) {
+        width: 50%;
+    }
+    @media (max-width: @breakpointCourseMapsLower) {
+        width: 100%;
+    }
+}
+.course-map-box-left {
+    text-align: center;
+
+    @media(min-width: @breakpointCourseMaps) {
+        text-align: right;
+        padding-right: 20px;
+        .border-box;
+    }
+}
+.course-map-box-right {
+    text-align: center;
+
+    @media(min-width: @breakpointCourseMaps) {
+        text-align: left;
+        padding-left: 20px;
+        .border-box;
     }
 }
 
