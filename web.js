@@ -3,9 +3,9 @@ var newrelic = require('newrelic'),
     app = express();
 
 app.use(function(req, res, next){
-    if (req.url.match(/\.jpg$/)) {
-        res.setHeader("Cache-Control", "public, max-age=345600"); // 4 days
-        res.setHeader("Expires", new Date(Date.now() + 345600000).toUTCString());
+    if (req.url.match(/\.(jpg|css|js)$/)) {
+        res.setHeader("Cache-Control", "public, max-age=604800"); // 7 days
+        res.setHeader("Expires", new Date(Date.now() + 604800000).toUTCString());
     }
     next();
 });
