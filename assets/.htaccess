@@ -1,7 +1,0 @@
-<IfModule mod_expires.c>
-    # Enable expirations
-    ExpiresActive On
-    # Images
-    ExpiresByType image/jpg "access plus 1 month"
-    ExpiresByType image/jpeg "access plus 1 month"
-</IfModule>
