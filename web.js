@@ -3,7 +3,7 @@ var newrelic = require('newrelic'),
     app = express();
 
 app.use(function(req, res, next){
-    if (req.url.match(/\.(jpg|css|js)$/)) {
+    if (req.url.match(/\.(jpg|png|css|js)$/)) {
         res.setHeader("Cache-Control", "public, max-age=604800"); // 7 days
         res.setHeader("Expires", new Date(Date.now() + 604800000).toUTCString());
     }
