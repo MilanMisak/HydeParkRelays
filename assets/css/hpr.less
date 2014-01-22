@@ -82,6 +82,14 @@ a {
         &:hover {
             border: 1px solid @offBlack;
         }
+
+        &.no-border {
+            border: none;
+
+            &:hover {
+                border: none;
+            }
+        }
     }
 }
 
@@ -174,6 +182,9 @@ table {
 }
 
 .band {
+    &:last-child {
+        margin-bottom: 20px;
+    }
 }
 .band-primary {
     color: @offWhite;
