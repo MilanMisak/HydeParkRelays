@@ -90,6 +90,10 @@ a {
                 border: none;
             }
         }
+
+        &.no-padding {
+            padding: 0;
+        }
     }
 }
 
@@ -201,5 +205,28 @@ table {
     @media(min-width: @breakpointMobile) {
         width: @breakpointMobile;
         margin: 0 auto;
+    }
+}
+
+.sponsors {
+    @media(max-width: 569px) {
+        a {
+            display: block;
+            &:first-child {
+                margin-left: 56px;
+            }
+        }
+        a+ a {
+            margin-top: 20px;
+        }
+    }
+    @media(min-width: 570px) {
+        padding-left: 40px;
+        img {
+            vertical-align: middle;
+        }
+        a+ a {
+            margin-left: 30px;
+        }
     }
 }
